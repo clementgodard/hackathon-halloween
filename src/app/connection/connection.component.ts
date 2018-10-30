@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Overlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
-import { Portal } from '@angular/cdk/portal';
+import { Component, OnInit } from '@angular/core';
+import { CdkOverlayOrigin } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-connection',
@@ -10,17 +9,8 @@ import { Portal } from '@angular/cdk/portal';
 export class ConnectionComponent implements OnInit {
 
   buttonOverlayOrigin: CdkOverlayOrigin;
-
-  //isMenuOpen: boolean = false;
-
-  //@ViewChild(CdkOverlayOrigin) _overlayOrigin: CdkOverlayOrigin;
-
-  constructor(/*overlay: Overlay*/) {
-    /*const overlayRef = overlay.create({
-      height: '400px',
-      width: '600px',
-    });*/
-  }
+  
+  constructor() {  }
 
   signInOn() {
     document.getElementById("sign-in-overlay").style.display = "block";
