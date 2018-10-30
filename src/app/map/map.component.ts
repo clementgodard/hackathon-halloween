@@ -9,15 +9,24 @@ export class MapComponent implements OnInit {
 
   constructor() {
     if (navigator.geolocation) {
-      // navigator.geolocation.getCurrentPosition(maPosition);
-      navigator.geolocation.watchPosition(this.maPosition);
+      navigator.geolocation.getCurrentPosition(this.initPos);
+      // navigator.geolocation.watchPosition(this.maPosition);
     } else {
       console.log('pas de GPS');
     }
   }
 
   ngOnInit() {
+  }
 
+  public initPos(position) {
+    const mapProp = {
+      center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+      // center:new google.maps.LatLng(45, 0),
+      zoom: 9,
+    };
+
+    const map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
   }
 
   public maPosition(position) {
@@ -28,11 +37,11 @@ export class MapComponent implements OnInit {
     // infopos += "Vitesse  : "+position.coords.speed +"\n";
     document.getElementById('coord').innerHTML = infopos;
 
-    const mapProp = {
-        center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+    // const mapProp = {
+        // center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
         // center:new google.maps.LatLng(45, 0),
-        zoom: 9,
-    };
+        // zoom: 9,
+    // };
 
     // const marker = new google.maps.Marker({position: myCenter});
 
@@ -41,7 +50,7 @@ export class MapComponent implements OnInit {
         zoom:5,
     };*/
 
-    const map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
+    // const map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
     // marker.setMap(map);
   }
 
