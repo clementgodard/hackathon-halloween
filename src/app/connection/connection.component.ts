@@ -10,7 +10,7 @@ export class ConnectionComponent implements OnInit {
 
   buttonOverlayOrigin: CdkOverlayOrigin;
   
-  constructor() {  }
+  constructor() { }
 
   signInOn() {
     document.getElementById("sign-in-overlay").style.display = "block";

@@ -1,33 +1,77 @@
 <!--_________________ ENTETE BONBONDEX_________________-->
 
+<div id="sign-in-overlay">
+  <div id="text">
+    <form>
+      <i class="fas fa-times float-right" (click)="off()"> </i>
+      <div class="form-group">
+        <label for="sign-in-email">E-mail</label>
+        <input type="email" class="form-control" id="sign-in-email" placeholder="example@example.com">
+      </div>
+      <div class="form-group">
+        <label for="sign-in-password">Password</label>
+        <input type="password" class="form-control" id="sign-in-password" placeholder="Password">
+      </div>
+      <button class="form-button btn" type="submit" (click)="off()">Sign in</button>
+    </form>
+  </div>
+</div>
+
+<div id="register-overlay">
+  <div id="text">
+    <form>
+      <i class="fas fa-times float-right" (click)="off()"> </i>
+      <div class="form-group">
+        <label for="register-name">Your CandyHunter name</label>
+        <input type="text" class="form-control" id="register-name" placeholder="TheBestHunterEver">
+      </div>
+      <div class="form-group">
+        <label for="register-email">E-mail</label>
+        <input type="email" class="form-control" id="register-email" placeholder="example@example.com">
+      </div>
+      <div class="form-group">
+        <label for="register-password">Password</label>
+        <input type="password" class="form-control" id="register-password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="register-confirm-password">Confirm password</label>
+        <input type="password" class="form-control" id="register-confirm-password" placeholder="Password">
+      </div>
+      <button class="form-button btn" type="submit" (click)="off()">Sign in</button>
+    </form>
+  </div>
+</div>
+
 <div class="container-fluid">
-    
-    <div class="container-titre-app row">
-        <div class="titre-app col-9">CANDYDEX</div>
-        <div class="logo-connexion col-3">
-            <p>Logo Sign-up</p>
-            <p>Logo Sign-in</p>
-        </div>
-    </div>
 
-<!--_________________ NAV BAR ___________________-->
-
-    <div class="container-nav-bar container-fluid">
-        <div class="group-boutton-nav-bar row">
-            <div class="boutton-nav-bar col-4"> Map </div>
-            <div class="boutton-nav-bar col-4"> Candy List </div>
-            <div class="boutton-nav-bar col-4"> My Collection </div>
-        </div>
+  <div class="container-titre-app row">
+    <div class="titre-app col-9">CANDYDEX</div>
+    <div class="logo-connexion col-3">
+      <button class="front-button col-12" type="button" (click)="signInOn()">Sign-In</button>
+      <button class="front-button col-12" type="button" (click)="registerOn()">Register</button>
     </div>
-    
-<!--__________________ PLACE IMAGE API______________________-->
+  </div>
 
-    <div class="container-image-api offset-1 col-10 offset-1">
-        <h2>CANDY CAPTURE</h2>
-        <div class="image-candy img-fluid">
-            <img src="../../assets/halloween-600x450.png"/>
-        </div>
-        <div class="description-candy">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam molestiae laborum omnis et facilis amet recusandae sapiente sunt voluptatem saepe fugiat, distinctio quasi possimus, voluptate ducimus officia nostrum eius.</p>
-        </div>
+  <!--_________________ NAV BAR ___________________-->
+
+  <div class="container-nav-bar container-fluid">
+    <div class="group-boutton-nav-bar row">
+      <div class="boutton-nav-bar col-4"> Map </div>
+      <div class="boutton-nav-bar col-4"> Candy List </div>
+      <div class="boutton-nav-bar col-4"> My Collection </div>
     </div>
+  </div>
+
+  <!--__________________ PLACE IMAGE API______________________-->
+
+  <div class="container-image-api offset-1 col-10 offset-1">
+    <h2>CANDY CAPTURE</h2>
+    <div class="image-candy img-fluid">
+      <img src="../../assets/halloween-600x450.png" />
+    </div>
+    <div class="description-candy">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam molestiae laborum omnis et facilis
+        amet recusandae sapiente sunt voluptatem saepe fugiat, distinctio quasi possimus, voluptate ducimus officia
+        nostrum eius.</p>
+    </div>
+  </div>
