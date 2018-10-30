@@ -10,10 +10,11 @@ export class TriBonbonPipe implements PipeTransform {
     const res: Bonbon[] = [];
 
     if (search === '') {
-      if (viewAll)
+      if (viewAll) {
         return tab;
-      else
+      } else {
         return res;
+      }
     }
 
     for (let i = 0 ; i < tab.length ; i++) {

@@ -51,16 +51,23 @@ export class BonbonsComponent implements OnInit {
       }
   }
 
-  public afficheTableau() {
-    console.log(this.tableauBonbons);
-  }
-
   public addBonbon(bonbon: Bonbon) {
-    this.bonbonEnPoche.push(bonbon);
+    if (this.bonbonEnPoche.indexOf(bonbon) === -1)
+    {
+      this.bonbonEnPoche.push(bonbon);
+    } else {
+      bonbon.nombrePlus();
+    }
     this.mapService.addMarker(bonbon);
   }
 
   public toggleViewAll() {
     this.viewAll = !this.viewAll;
+  }
+
+  public enlever(bonbon: Bonbon) {
+    const index = this.bonbonEnPoche.indexOf(bonbon);
+    this.bonbonEnPoche.splice(index, 1);
+    bonbon.resetNombre();
   }
 }
