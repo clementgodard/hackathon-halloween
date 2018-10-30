@@ -1,7 +1,5 @@
-<input type="button" value="clic" (click)="afficheTableau()" />
-<input type="text" [(ngModel)]="recherche" />
-
 <div id="listeBonbonEnPoche">
+  <h1>Bonbons collectés :</h1>
   <div class="bonbonEnPoche" *ngFor="let bonbon of bonbonEnPoche">
     <h2>{{ bonbon.getNom() }}</h2>
     <img src="{{ bonbon.getImg() }}" alt="bonbon en poche" />
@@ -9,8 +7,15 @@
 </div>
 
 <div id="listeBonbons">
-    <div class="bonbon" *ngFor="let bonbon of tableauBonbons | triBonbon:recherche" (click)="addBonbon(bonbon)" >
-      <h2>{{ bonbon.getNom() }}</h2>
-      <img src="{{ bonbon.getImg() }}" alt="bonbon" />
-    </div>
+  <h1>Liste de tout les bonbons :</h1>
+
+  <div>
+    <label for="recherche">Recherche de bonbon :</label>
+    <input id="recherche" type="text" [(ngModel)]="recherche" />
+  </div>
+    
+  <div class="bonbon" *ngFor="let bonbon of tableauBonbons | triBonbon:recherche" (click)="addBonbon(bonbon)" >
+    <h2>{{ bonbon.getNom() }}</h2>
+    <img src="{{ bonbon.getImg() }}" alt="bonbon" />
+  </div>
 </div>
