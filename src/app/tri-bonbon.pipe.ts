@@ -6,11 +6,14 @@ import { Bonbon } from './bonbon';
 })
 export class TriBonbonPipe implements PipeTransform {
 
-  transform(tab: Bonbon[], search: string): Bonbon[] {
+  transform(tab: Bonbon[], search: string, viewAll: boolean = false): Bonbon[] {
     const res: Bonbon[] = [];
 
     if (search === '') {
-      return res;
+      if (viewAll)
+        return tab;
+      else
+        return res;
     }
 
     for (let i = 0 ; i < tab.length ; i++) {

@@ -1,32 +1,39 @@
-.bonbon
-{
-    /* background-color : #BBB; */
-    border : 1px solid white;
-    color : orange;
-    /* margin-bottom : 1rem; */
-    background-color : black;
+.bonbon {
+  /* background-color : #BBB; */
+  border: 1px solid white;
+  color: orange;
+  /* margin-bottom : 1rem; */
+  background-color: black;
 }
 
-.bonbonEnPoche
-{
-    border : 1px solid black;
-    color : green;
-    text-align: left;
+.bonbonEnPoche {
+  border: 1px solid black;
+  color: green;
+  text-align: left;
 }
 
-div h2
-{
-    text-align : center;
-    font-size : 1.8rem;
-    color : darkorange; 
+div h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: darkorange;
 }
 
 div h3 {
-    text-align : center;
-    font-size : 1.3rem;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
-#listeBonbonEnPoche
-{
-    margin-bottom: 1rem;
+label {
+    margin: 0;
+    display: flex;
+    align-self: center;
+}
+
+#listeBonbonEnPoche {
+  margin-bottom: 1rem;
+  background-color: black;
+}
+
+#listeBonbons {
+  background-color: black;
 }

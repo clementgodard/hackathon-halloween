@@ -105,7 +105,7 @@ export class MapService {
     this.addMarker(new Bonbon('Petit Ourson', 'https://static.openfoodfacts.org/images/products/317/328/920/4708/front_fr.10.400.jpg'), coords);
 
     coords = new google.maps.LatLng(48.471223, 1.008011);
-    this.addMarker(new Bonbon('Sucette', 'https://static.openfoodfacts.org/images/products/49814521/front_fr.13.400.jpg'), coords);
+    this.addMarker(new Bonbon('Space Lollipop', 'https://static.openfoodfacts.org/images/products/859/401/843/2318/front_fr.4.400.jpg'), coords);
 
     coords = new google.maps.LatLng(48.468754, 1.007817);
     this.addMarker(new Bonbon('Smarties', 'https://static.openfoodfacts.org/images/products/40056470/front_fr.17.400.jpg'), coords);

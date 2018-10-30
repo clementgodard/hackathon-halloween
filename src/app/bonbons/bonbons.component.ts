@@ -14,6 +14,7 @@ export class BonbonsComponent implements OnInit {
   public tableauBonbons: Bonbon[];
   public recherche: string;
   public bonbonEnPoche: Bonbon[];
+  public viewAll: boolean;
 
   constructor(param: CandyApiService, param_map: MapService) {
     this.service = param;
@@ -21,6 +22,7 @@ export class BonbonsComponent implements OnInit {
     this.recherche = '';
     this.bonbonEnPoche = [];
     this.mapService = param_map;
+    this.viewAll = false;
   }
 
   ngOnInit() {
@@ -57,4 +59,7 @@ export class BonbonsComponent implements OnInit {
     this.mapService.addMarker(bonbon);
   }
 
+  public toggleViewAll() {
+    this.viewAll = !this.viewAll;
+  }
 }

@@ -65,6 +65,7 @@
     height: 100%;
     margin: 2.5em auto;
     padding-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .container-image-api p,h2{

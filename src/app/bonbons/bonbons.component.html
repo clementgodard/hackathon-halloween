@@ -11,13 +11,14 @@
 <div id="listeBonbons" class="container">
   <h2>Liste de tout les bonbons :</h2>
 
-  <div class="row">
+  <div class="row mb-4">
     <label for="recherche">Recherche de bonbon :</label>
     <input id="recherche" type="text" [(ngModel)]="recherche" />
+    <input type="button" value="Afficher/Cacher tout les bonbons" (click)="toggleViewAll()" />
   </div>
     
   <div class="row">
-    <div class="bonbon col-12 col-md-6 col-lg-4" *ngFor="let bonbon of tableauBonbons | triBonbon:recherche" (click)="addBonbon(bonbon)" >
+    <div class="bonbon col-12 col-md-6 col-lg-4" *ngFor="let bonbon of tableauBonbons | triBonbon:recherche:viewAll" (click)="addBonbon(bonbon)" >
       <h3>{{ bonbon.getNom() }}</h3>
       <img class="img-fluid" src="{{ bonbon.getImg() }}" alt="bonbon" />
     </div>
