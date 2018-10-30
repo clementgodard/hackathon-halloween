@@ -1,3 +1,9 @@
+*{
+    font-family: 'Bonbon';
+    margin: 0;
+    padding: 0;
+ }
+
 /*__________container du site___________*/
 .container-fluid {
     background-color: #000001;
@@ -6,12 +12,15 @@
 
 /*__________container titre___________*/
 .container-titre-app{
-    /* width: 100%; */
-    height: 3rem; 
+    height: 3rem;
+    color: #F30605;
+    font-size: 3rem;
 }
+ 
 
 .titre-app{
-    background-color: #E25090;
+    background-color: #00005e;
+    text-align: center;
 }
 
 .logo-connexion{
@@ -22,6 +31,14 @@
 /*__________container Nav Bar___________*/
 .container-nav-bar{
     display: inline-block;
-    text-align: center;
-    
+    text-align: center;    
+}
+.boutton-nav-bar{
+    border-right: 1px solid #FF5800;
+    border-left: 1px solid #FF5800;
+}
+
+.boutton-nav-bar:hover{
+    background-color: #FF5800;
+    color: #000001;    
 }

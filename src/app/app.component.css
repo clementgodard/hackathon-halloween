@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Bonbon';
+  src: url('../assets/fonts/bonbon.ttf') format('truetype');
+}
 
-
-
+@font-face {
+  font-family: 'WeenDings';
+  src: url('../assets/fonts/weendings.ttf') format('truetype');
+}
