@@ -9,6 +9,7 @@ import { MapComponent } from './map/map.component';
 import { CandyApiService } from './candy-api.service';
 import { BonbonsComponent } from './bonbons/bonbons.component';
 import { TriBonbonPipe } from './tri-bonbon.pipe';
+import { MapService } from './map.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { TriBonbonPipe } from './tri-bonbon.pipe';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CandyApiService],
+  providers: [CandyApiService, MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

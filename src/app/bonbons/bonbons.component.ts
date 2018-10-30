@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CandyApiService } from '../candy-api.service';
 import { Bonbon } from '../bonbon';
+import { MapService } from '../map.service';
 
 @Component({
   selector: 'app-bonbons',
@@ -9,15 +10,17 @@ import { Bonbon } from '../bonbon';
 })
 export class BonbonsComponent implements OnInit {
   public service: CandyApiService;
+  public mapService: MapService;
   public tableauBonbons: Bonbon[];
   public recherche: string;
   public bonbonEnPoche: Bonbon[];
 
-  constructor(param: CandyApiService) {
+  constructor(param: CandyApiService, param_map: MapService) {
     this.service = param;
     this.tableauBonbons = [];
     this.recherche = '';
     this.bonbonEnPoche = [];
+    this.mapService = param_map;
   }
 
   ngOnInit() {
@@ -51,6 +54,7 @@ export class BonbonsComponent implements OnInit {
 
   public addBonbon(bonbon: Bonbon) {
     this.bonbonEnPoche.push(bonbon);
+    this.mapService.addMarker(bonbon);
   }
 
 }
