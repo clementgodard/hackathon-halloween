@@ -55,12 +55,20 @@
     <form>
       <i class="fas fa-times float-right" (click)="off()"> </i>
       <div class="form-group">
+        <label for="register-name">Your CandyHunter name</label>
+        <input type="text" class="form-control" id="register-name" placeholder="TheBestHunterEver">
+      </div>
+      <div class="form-group">
         <label for="register-email">E-mail</label>
         <input type="email" class="form-control" id="register-email" placeholder="example@example.com">
       </div>
       <div class="form-group">
         <label for="register-password">Password</label>
         <input type="password" class="form-control" id="register-password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="register-confirm-password">Confirm password</label>
+        <input type="password" class="form-control" id="register-confirm-password" placeholder="Password">
       </div>
       <button type="submit" class="btn" (click)="off()">Sign in</button>
     </form>
@@ -69,7 +77,5 @@
 
 <div>
   <button type="button" (click)="signInOn()">Sign-In</button>
-</div>
-<div>
   <button type="button" (click)="registerOn()">Register</button>
 </div>

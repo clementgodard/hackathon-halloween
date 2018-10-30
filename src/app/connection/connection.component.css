@@ -1,3 +1,6 @@
+* {
+    font-family: 'Bonbon';
+}
 #sign-in-overlay, #register-overlay {
     position: fixed;
     display: none;
@@ -10,6 +13,10 @@
     background-color: rgba(0,0,0,0.85);
     z-index: 2;
     cursor: default;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free";
 }
 
 #text{
