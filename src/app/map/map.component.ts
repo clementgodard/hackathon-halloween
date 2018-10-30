@@ -17,13 +17,4 @@ export class MapComponent implements OnInit {
   ngOnInit() {
     this.mapService.initMap();
   }
-
-  public addMarker() {
-    this.mapService.addMarker(new Bonbon('test', ''));
-  }
-
-  public addFakeMarker() {
-    this.mapService.initMarkers();
-  }
-
 }
