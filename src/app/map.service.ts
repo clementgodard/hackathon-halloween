@@ -50,8 +50,8 @@ export class MapService {
           });
 
           // tslint:disable-next-line:max-line-length
-          const contentString = '<h2>' + bonbon.getNom() + '</h2><img src='
-                                 + bonbon.getImg() + ' alt=bonbon />';
+          const contentString = '<h4>' + bonbon.getNom() + '</h4><center><img src='
+                                 + bonbon.getImg() + ' alt=bonbon height=100px /></center>';
 
           const infowindow = new google.maps.InfoWindow({
             content: contentString
@@ -73,8 +73,8 @@ export class MapService {
       });
 
       // tslint:disable-next-line:max-line-length
-      const contentString = '<h2>' + bonbon.getNom() + '</h2><img src='
-      + bonbon.getImg() + ' alt=bonbon />';
+      const contentString = '<h4>' + bonbon.getNom() + '</h4><center><img src='
+      + bonbon.getImg() + ' alt=bonbon height=100px /></center>';
 
       const infowindow = new google.maps.InfoWindow({
           content: contentString
