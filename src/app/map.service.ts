@@ -27,6 +27,8 @@ export class MapService {
 
             const map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
             this.map = map;
+
+            this.initMarkers();
           }
         );
       } else {
@@ -43,7 +45,8 @@ export class MapService {
 
           const marker = new google.maps.Marker({
             position: coords,
-            title: bonbon.getNom()
+            title: bonbon.getNom(),
+            icon: '/assets/bonbon.png'
           });
 
           marker.setMap(this.map);
@@ -53,7 +56,8 @@ export class MapService {
       const coords = new google.maps.LatLng(p_position.lat(), p_position.lng());
       const marker = new google.maps.Marker({
         position: coords,
-        title: bonbon.getNom()
+        title: bonbon.getNom(),
+        icon: '/assets/bonbon.png'
       });
 
       marker.setMap(this.map);

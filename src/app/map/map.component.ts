@@ -21,9 +21,4 @@ export class MapComponent implements OnInit {
   public addMarker() {
     this.mapService.addMarker(new Bonbon('test', ''));
   }
-
-  public addFakeMarker() {
-    this.mapService.initMarkers();
-  }
-
 }
