@@ -52,7 +52,7 @@ export class BonbonsComponent implements OnInit {
   }
 
   public addBonbon(bonbon: Bonbon) {
-    if (this.bonbonEnPoche.indexOf(bonbon) === -1) 
+    if (this.bonbonEnPoche.indexOf(bonbon) === -1)
     {
       this.bonbonEnPoche.push(bonbon);
     } else {

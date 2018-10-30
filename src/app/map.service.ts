@@ -46,10 +46,9 @@ export class MapService {
           const marker = new google.maps.Marker({
             position: coords,
             title: bonbon.getNom(),
-            icon: '/assets/bonbon.png'
+            icon: 'assets/bonbon.png'
           });
 
-          // tslint:disable-next-line:max-line-length
           const contentString = '<h4>' + bonbon.getNom() + '</h4><center><img src='
                                  + bonbon.getImg() + ' alt=bonbon height=100px /></center>';
 
@@ -69,10 +68,9 @@ export class MapService {
       const marker = new google.maps.Marker({
         position: coords,
         title: bonbon.getNom(),
-        icon: '/assets/bonbon.png'
+        icon: 'assets/bonbon.png'
       });
 
-      // tslint:disable-next-line:max-line-length
       const contentString = '<h4>' + bonbon.getNom() + '</h4><center><img src='
       + bonbon.getImg() + ' alt=bonbon height=100px /></center>';
 
@@ -109,5 +107,9 @@ export class MapService {
 
     coords = new google.maps.LatLng(48.468754, 1.007817);
     this.addMarker(new Bonbon('Smarties', 'https://static.openfoodfacts.org/images/products/40056470/front_fr.17.400.jpg'), coords);
+
+    // console.log(localStorage.getItem('bonbon'));
+    // localStorage.setItem('bonbon', 'Hello world !');
+    // localStorage.removeItem('bonbon');
   }
 }
