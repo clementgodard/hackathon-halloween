@@ -22,12 +22,17 @@ export class ConnectionComponent implements OnInit {
     });*/
   }
 
-  on() {
-    document.getElementById("overlay").style.display = "block";
-}
+  signInOn() {
+    document.getElementById("sign-in-overlay").style.display = "block";
+  }
+
+  registerOn() {
+    document.getElementById("register-overlay").style.display = "block";
+  }
 
   off() {
-    document.getElementById("overlay").style.display = "none";
+    document.getElementById("sign-in-overlay").style.display = "none";
+    document.getElementById("register-overlay").style.display = "none";
   }
 
   ngOnInit() {
