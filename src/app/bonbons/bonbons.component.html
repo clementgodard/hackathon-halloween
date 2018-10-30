@@ -8,14 +8,14 @@
   </div>
 </div>
 
-<div id="listeBonbons" class="container">
+<div id="listeBonbons" class="container mb-4">
   <h2>Liste de tout les bonbons :</h2>
 
-  <div class="row mb-4">
-    <label for="recherche">Recherche de bonbon :</label>
-    <input id="recherche" type="text" [(ngModel)]="recherche" />
-    <input type="button" value="Afficher/Cacher tout les bonbons" (click)="toggleViewAll()" />
-  </div>
+  <form class="form-inline justify-content-center align-items-center">
+    <label class="col-form-label mr-2" for="recherche">Recherche de bonbon :</label>
+    <input class="form-control w-50" id="recherche" type="text" [(ngModel)]="recherche" />
+    <input class="form-control ml-4" type="button" value="Afficher/Cacher tout les bonbons" (click)="toggleViewAll()" />
+  </form>
     
   <div class="row">
     <div class="bonbon col-12 col-md-6 col-lg-4" *ngFor="let bonbon of tableauBonbons | triBonbon:recherche:viewAll" (click)="addBonbon(bonbon)" >
