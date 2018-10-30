@@ -1,0 +1,27 @@
+/*__________container du site___________*/
+.container-fluid {
+    background-color: #000001;
+    color: #FF5800;
+}
+
+/*__________container titre___________*/
+.container-titre-app{
+    /* width: 100%; */
+    height: 3rem; 
+}
+
+.titre-app{
+    background-color: #E25090;
+}
+
+.logo-connexion{
+    background-color: aqua;
+    color: #FFFFFF;
+}
+
+/*__________container Nav Bar___________*/
+.container-nav-bar{
+    display: inline-block;
+    text-align: center;
+    
+}
