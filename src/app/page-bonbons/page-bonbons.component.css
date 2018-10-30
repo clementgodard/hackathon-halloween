@@ -90,14 +90,14 @@ i {
     color : #F30605;
 }
 
-.logo-connexion p{
+.logo-connexion button{
     color: #FF5800;
     font-size: 1.5em;
     text-align: center;
     border: 1px solid #FF5800;
 }
 
-.logo-connexion p:hover{
+.logo-connexion button:hover{
     background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
     color: #000001;
     box-shadow: 5px 5px 5px #FF8800;
