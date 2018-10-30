@@ -8,12 +8,14 @@ import { ConnectionComponent } from './connection/connection.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { PortalModule } from '@angular/cdk/portal';
+import { PageBonbonsComponent } from './page-bonbons/page-bonbons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    ConnectionComponent
+    ConnectionComponent,
+    PageBonbonsComponent
   ],
   imports: [
     BrowserModule,
