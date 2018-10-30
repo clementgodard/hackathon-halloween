@@ -22,6 +22,14 @@ export class ConnectionComponent implements OnInit {
     });*/
   }
 
+  on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+  off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+
   ngOnInit() {
   }
 

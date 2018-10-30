@@ -7,23 +7,50 @@
   </div>
 </ng-template> -->
 
+<!-- 
+<button id="trigger-1" #trigger1="cdkOverlayOrigin" cdkOverlayOrigin (click)="buttonOverlayOrigin=trigger1">
+  Trigger One
+</button>
+<button id="trigger-2" #trigger2="cdkOverlayOrigin" cdkOverlayOrigin (click)="buttonOverlayOrigin=trigger2">
+  Trigger Two
+</button>
 
-  <button id="trigger-1" #trigger1="cdkOverlayOrigin" cdkOverlayOrigin (click)="buttonOverlayOrigin=trigger1">
-    Trigger One
-  </button>
-  <button id="trigger-2" #trigger2="cdkOverlayOrigin" cdkOverlayOrigin (click)="buttonOverlayOrigin=trigger2">
-    Trigger Two
-  </button>
-
-<ng-template 
-  cdkConnectedOverlay 
-  [cdkConnectedOverlayOrigin]="buttonOverlayOrigin" 
-  [cdkConnectedOverlayOpen]="buttonOverlayOrigin"
-  (detach)="buttonOverlayOrigin=null"
-  hasBackdrop 
-  >
-  <div style="background-color: mediumpurple" >
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="buttonOverlayOrigin" [cdkConnectedOverlayOpen]="buttonOverlayOrigin"
+  (detach)="buttonOverlayOrigin=null" hasBackdrop>
+  <div class="connection-overlay" style="background-color: black">
     I was triggered by {{ buttonOverlayOrigin.elementRef.nativeElement.id }}
-    
+
+    <form>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="example@example.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+    </form>
   </div>
-</ng-template>
+</ng-template> -->
+
+<div id="overlay">
+  <div id="text">
+    <form>
+      <button type="submit" class="btn" (click)="off()">Abort</button>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="example@example.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn" (click)="off()">Sign in</button>
+    </form>
+  </div>
+</div>
+
+<div style="padding:20px">
+  <h2>Overlay with Text</h2>
+  <button type="button" (click)="on()">Turn on overlay effect</button>
+</div>
