@@ -72,28 +72,35 @@ i {
 /*__________container titre___________*/
 .container-titre-app{
     height: 6rem;
-    color: #F30605;    
+    color: #000001;  
+}
+
+.container-titre-app:hover{
+    
 }
 
 .titre-app{
-    /* background-color: #000001; */
     text-align: center;
     font-size: 500%;
+    background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
+}
 
+.titre-app:hover{
+    background: linear-gradient(to bottom, #ff5800 0%, #000001 100%);
+    color : #F30605;
 }
 
 .logo-connexion p{
-    /* background-color: #000001; */
     color: #FF5800;
     font-size: 1.5em;
     text-align: center;
     border: 1px solid #FF5800;
-    box-shadow: 5px 5px 5px #FF8800;
 }
 
 .logo-connexion p:hover{
-    background-color: #FF5800;
+    background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
     color: #000001;
+    box-shadow: 5px 5px 5px #FF8800;
 }
 
 /*__________container Nav Bar___________*/
@@ -109,7 +116,7 @@ i {
 }
 
 .boutton-nav-bar:hover{
-    background-color: #FF5800;
+    background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
     color: #000001;    
     box-shadow: 10px 5px 5px #FF8800;
 }
@@ -128,9 +135,12 @@ i {
     font-size: 2rem;
 }
 
+h2{
+    margin-top: 1em;
+}
+
 .image-candy{
     overflow: hidden;
-    border-image-width: 100% ;
     border: 1px solid #FF5800;
     box-shadow: 5px 5px 5px 5px #FF8800;
 }
