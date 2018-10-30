@@ -1,6 +1,32 @@
 .bonbon
 {
-    background-color : #BBB;
+    /* background-color : #BBB; */
+    border : 1px solid white;
+    color : orange;
+    /* margin-bottom : 1rem; */
+    background-color : black;
+}
+
+.bonbonEnPoche
+{
     border : 1px solid black;
-    margin-bottom : 1rem;
+    color : green;
+    text-align: left;
+}
+
+div h2
+{
+    text-align : center;
+    font-size : 1.8rem;
+    color : darkorange; 
+}
+
+div h3 {
+    text-align : center;
+    font-size : 1.3rem;
+}
+
+#listeBonbonEnPoche
+{
+    margin-bottom: 1rem;
 }
