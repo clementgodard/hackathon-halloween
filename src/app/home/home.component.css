@@ -1,0 +1,72 @@
+ .body {
+   background-size: 100% 100vh;
+   background-color: darkorange;
+   background-image: url("../../assets/haloImage/6-2-halloween-png-images.png");
+   font-family: 'Bonbon';
+   width: 100%;
+   height: 100vh;
+   padding-top: 0%;
+   top: 0;
+   /* position: fixed;*/
+ }
+
+ #logo {
+
+   font-size: 4vw;
+   font-family: 'Bonbon';
+   font-weight: bold;
+   color: white;
+   font-style: italic;
+   text-shadow: 2px 2px black;
+   margin-left: 15px;
+   padding-top: 20px;
+ }
+
+ #link-logo {
+   text-decoration: none;
+   color: white;
+ }
+
+ /* .container-fluid {
+    
+    height:0;
+    margin-left: 5px;
+    margin-right:5px;
+    margin-bottom: 10px;
+    color: white;
+
+  
+  }  */
+
+ .footer {
+   align-content: center;
+   text-align: center;
+   color: white;
+   font-family: Bonbon;
+   bottom: 0;
+ }
+
+ .avatar {
+   text-align: right;
+   color: white;
+   font-family: Bonbon;
+   align-content: right;
+
+
+ }
+
+
+
+ .row {
+   align-content: center;
+   text-align: center;
+   color: white;
+   font-family: Bonbon;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   padding-bottom: 20px;
+ }
+
+
+
