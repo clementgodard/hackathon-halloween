@@ -134,3 +134,8 @@
 .button a:hover {
   color: dimgrey;
 }
+
+.small
+{
+  font-size: 3rem;
+}
