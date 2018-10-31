@@ -15,6 +15,7 @@ import { CandyApiService } from './candy-api.service';
 import { BonbonsComponent } from './bonbons/bonbons.component';
 import { TriBonbonPipe } from './tri-bonbon.pipe';
 import { MapService } from './map.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MapService } from './map.service';
     ConnectionComponent,
     PageBonbonsComponent,
     BonbonsComponent,
-    TriBonbonPipe
+    TriBonbonPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
