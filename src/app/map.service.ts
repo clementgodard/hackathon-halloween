@@ -8,10 +8,12 @@ import { CandyApiService } from './candy-api.service';
 export class MapService {
   public map: google.maps.Map;
   public candyService: CandyApiService;
+  public markers: google.maps.Marker[];
 
   constructor(param: CandyApiService) {
     this.map = null;
     this.candyService = param;
+    this.markers = [];
   }
 
   public initMap() {
@@ -43,6 +45,8 @@ export class MapService {
               this.addMarker(this.candyService.tableauBonbons[
                  Math.round(Math.random() * this.candyService.tableauBonbons.length - 1) ],
               new google.maps.LatLng(latitude, longitude));
+
+              this.showOverlay();
             });
           }
         );
@@ -75,7 +79,13 @@ export class MapService {
             infowindow.open(this.map, marker);
           });
 
+          marker.addListener('rightclick', (event) => {
+            marker.setMap(null);
+          });
+
           marker.setMap(this.map);
+
+          this.markers.push(marker);
 
           // localStorage.setItem('mapCandydex', '');
         }
@@ -99,7 +109,13 @@ export class MapService {
         infowindow.open(this.map, marker);
       });
 
+      marker.addListener('rightclick', (event) => {
+        marker.setMap(null);
+      });
+
       marker.setMap(this.map);
+
+      this.markers.push(marker);
     }
   }
 
@@ -135,5 +151,18 @@ export class MapService {
     // console.log(localStorage.getItem('bonbon'));
     // localStorage.setItem('bonbon', 'Hello world !');
     // localStorage.removeItem('bonbon');
+  }
+
+  public hideOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+
+  public showOverlay() {
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  public hideAndDeleteOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+    this.markers[this.markers.length - 1].setMap(null);
   }
 }

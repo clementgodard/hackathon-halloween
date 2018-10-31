@@ -12,13 +12,11 @@ export class BonbonsComponent implements OnInit {
   public service: CandyApiService;
   public mapService: MapService;
   public recherche: string;
-  public bonbonEnPoche: Bonbon[];
   public viewAll: boolean;
 
   constructor(param: CandyApiService, param_map: MapService) {
     this.service = param;
     this.recherche = '';
-    this.bonbonEnPoche = [];
     this.mapService = param_map;
     this.viewAll = false;
   }
@@ -49,23 +47,7 @@ export class BonbonsComponent implements OnInit {
     // }
   }
 
-  public addBonbon(bonbon: Bonbon) {
-    if (this.bonbonEnPoche.indexOf(bonbon) === -1)
-    {
-      this.bonbonEnPoche.push(bonbon);
-    } else {
-      bonbon.nombrePlus();
-    }
-    this.mapService.addMarker(bonbon);
-  }
-
   public toggleViewAll() {
     this.viewAll = !this.viewAll;
-  }
-
-  public enlever(bonbon: Bonbon) {
-    const index = this.bonbonEnPoche.indexOf(bonbon);
-    this.bonbonEnPoche.splice(index, 1);
-    bonbon.resetNombre();
   }
 }
