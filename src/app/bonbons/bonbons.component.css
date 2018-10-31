@@ -1,10 +1,18 @@
+* {
+  font-family: 'Haunted';
+}
+
 .bonbon {
   /* background-color : #BBB; */
   border: 1px solid white;
-  color: orange;
+  color: #FF5800;
   /* margin-bottom : 1rem; */
   background-color: black;
   cursor : pointer;
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free";
 }
 
 .close
@@ -12,25 +20,25 @@
   position : absolute;
   right : 0;
   top : 1.5%;
-  color : orange;
+  color : #FF5800;
 }
 
 .bonbonEnPoche {
-  border: 1px solid darkorange;
-  color: darkorange;
+  border: 1px solid #FF8800;
+  color: #FF5800;
   text-align: left;
 }
 
 div h2 {
   text-align: center;
   font-size: 2rem;
-  color: darkorange;
+  color: #FF5800;
 }
 
 #listeBonbonEnPoche h3 {
   text-align: center;
   font-size: 1.5rem;
-  text-decoration: underline orange;
+  text-decoration: underline #FF5800;
 }
 
 #listeBonbons h3 {
@@ -42,6 +50,13 @@ label {
     margin: 0;
     display: flex;
     align-self: center;
+    font-size: 1.5rem;
+}
+
+.show-hide {
+  background-color: black;
+  border: 1px solid #FF5800;
+  color: #FF5800;
 }
 
 #listeBonbonEnPoche {
@@ -69,7 +84,7 @@ input:focus {
 
 .couleur
 {
-  color : orange;
+  color : #FF5800;
 }
 
 .petitText

@@ -1,6 +1,6 @@
 *{
     background-color: #000001;
-    font-family: 'Bonbon';
+    font-family: 'Haunted';
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
@@ -51,7 +51,7 @@ i {
 }
 
 .form-group input {
-    border: 1px solid orangered;
+    border: 1px solid #FF5800;
 }
 
 .form-group input {
@@ -74,7 +74,7 @@ i {
 
 .front-button {
     background-color: black;
-    border: 1px solid orangered;
+    border: 1px solid #FF5800;
     color: white;
     font-size: 1.5em;
     margin: .5vh 0;
@@ -83,7 +83,7 @@ i {
 .form-button {
     height: 5vh;
     background-color: black;
-    border: 1px solid orangered;
+    border: 1px solid #FF5800;
     color: white;
     font-size: 1.5rem;
     padding: 0 5%;
@@ -107,7 +107,7 @@ i {
 
 .titre-app{
     text-align: center;
-    font-size: 500%;
+    font-size: 4rem;
     background: linear-gradient(to bottom, #000001 0%, #FF5800 100%);
 }
 
@@ -158,7 +158,7 @@ i {
 }
 
 .container-image-api p,h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h2{
@@ -179,7 +179,7 @@ h2{
 
 a
 {
-    color : orange;
+    color : #FF5800;
     background-color: rgba(0,0,0,0);
 }
 

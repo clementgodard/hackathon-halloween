@@ -7,3 +7,8 @@
   font-family: 'WeenDings';
   src: url('../assets/fonts/weendings.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Haunted';
+  src: url('../assets/fonts/PWHaunted.ttf') format('truetype');
+}

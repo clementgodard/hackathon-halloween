@@ -1,5 +1,5 @@
 <div id="listeBonbonEnPoche" class="container">
-  <h2>Types de bonbon collectés (x{{ service.bonbonEnPoche.length }}) :</h2>
+  <h2>Collected Candy (x{{ service.bonbonEnPoche.length }}) :</h2>
   <div class="row">
     <div class="bonbonEnPoche col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.bonbonEnPoche">
       <h3>{{ bonbon.getNom() }} (x{{ bonbon.getNombre() }})</h3>
@@ -10,12 +10,12 @@
 </div>
 
 <div id="listeBonbons" class="container mb-4">
-  <h2>Liste de tout les bonbons :</h2>
+  <h2>Candy List :</h2>
 
   <form class="form-inline justify-content-center align-items-center mb-4">
-    <label class="col-form-label mr-2" for="recherche">Recherche de bonbon :</label>
+    <label class="col-form-label mr-2" for="recherche">Candy Search :</label>
     <input class="form-control w-50 mb-2" id="recherche" type="text" name="recherche" [(ngModel)]="recherche" />
-    <input class="form-control ml-4" type="button" value="Afficher/Cacher tout les bonbons" (click)="toggleViewAll()" />
+    <input class="show-hide form-control ml-4" type="button" value="Show/Hide all Candys" (click)="toggleViewAll()" />
   </form>
 
   <div class="row">
@@ -29,5 +29,5 @@
 
 <div class="goTop">
   <!-- <a href="#" class="couleur"><i class="far fa-arrow-alt-circle-up"></i></a> -->
-  <a href="#header" class="couleur"><i class="fas fa-ghost"></i><span class="petitText">&nbsp;Retour en haut&nbsp;</span><i class="fas fa-ghost"></i></a>
+  <a href="#header" class="couleur"><i class="fas fa-ghost"></i><span class="petitText">&nbsp;Back to Top&nbsp;</span><i class="fas fa-ghost"></i></a>
 </div>
