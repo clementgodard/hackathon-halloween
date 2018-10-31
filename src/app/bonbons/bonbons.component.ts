@@ -11,16 +11,12 @@ import { MapService } from '../map.service';
 export class BonbonsComponent implements OnInit {
   public service: CandyApiService;
   public mapService: MapService;
-  public tableauBonbons: Bonbon[];
   public recherche: string;
-  public bonbonEnPoche: Bonbon[];
   public viewAll: boolean;
 
   constructor(param: CandyApiService, param_map: MapService) {
     this.service = param;
-    this.tableauBonbons = [];
     this.recherche = '';
-    this.bonbonEnPoche = [];
     this.mapService = param_map;
     this.viewAll = false;
   }
@@ -39,35 +35,19 @@ export class BonbonsComponent implements OnInit {
      + 'page_size=1000&json=1').subscribe(
     */
 
-      for (let i = 1 ; i <= 50 ; i++) {
-        this.service.getUrl('https://fr.openfoodfacts.org/categorie/bonbons/' + i + '.json').subscribe
-        (
-          (param: any) => {
-            for (const obj of param.products) {
-              this.tableauBonbons.push(new Bonbon(obj.product_name, obj.image_url));
-            }
-          }
-        );
-      }
-  }
-
-  public addBonbon(bonbon: Bonbon) {
-    if (this.bonbonEnPoche.indexOf(bonbon) === -1)
-    {
-      this.bonbonEnPoche.push(bonbon);
-    } else {
-      bonbon.nombrePlus();
-    }
-    this.mapService.addMarker(bonbon);
+    // for (let i = 1 ; i <= 50 ; i++) {
+    //   this.service.getUrl('https://fr.openfoodfacts.org/categorie/bonbons/' + i + '.json').subscribe
+    //   (
+    //     (param: any) => {
+    //       for (const obj of param.products) {
+    //         this.tableauBonbons.push(new Bonbon(obj.product_name, obj.image_url));
+    //       }
+    //     }
+    //   );
+    // }
   }
 
   public toggleViewAll() {
     this.viewAll = !this.viewAll;
-  }
-
-  public enlever(bonbon: Bonbon) {
-    const index = this.bonbonEnPoche.indexOf(bonbon);
-    this.bonbonEnPoche.splice(index, 1);
-    bonbon.resetNombre();
   }
 }

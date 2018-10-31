@@ -2,4 +2,22 @@
 
 <div id="googleMap" style="width:100%;height:80vh;"></div>
 
-<!-- <app-bonbons></app-bonbons> -->
+<!-- <input type="button" value="Change last marker" (click)="showOverlay()" /> -->
+<div id="overlay" class="container-fluid">
+    <div class="container">
+        <span class="close" (click)="mapService.hideAndDeleteOverlay()">&times;</span>
+        <h1>Choisisez votre bonbon</h1>
+
+        <form class="form-inline justify-content-center">
+            <input class="form-control w-100" id="recherche" type="text" name="recherche" [(ngModel)]="recherche" />
+        </form>
+
+        <div class="row">
+            <div class="bonbon col-12 col-md-6 col-lg-4 justify-content-center" *ngFor="let bonbon of service.tableauBonbons | triBonbon:recherche:viewAll"
+                (click)="service.addBonbon(bonbon) ; addBonbonToMarker(bonbon) ; mapService.hideOverlay()">
+                <h3>{{ bonbon.getNom() }}</h3>
+                <img class="img-fluid" src="{{ bonbon.getImg() }}" alt="bonbon" />
+            </div>
+        </div>
+    </div>
+</div>
