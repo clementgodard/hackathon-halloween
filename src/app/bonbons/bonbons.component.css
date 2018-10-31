@@ -60,3 +60,19 @@ input {
 input:focus {
   background-color : #DDD; 
 }
+
+.goTop
+{
+  text-align: right;
+  font-size : 3rem;
+}
+
+.couleur
+{
+  color : orange;
+}
+
+.petitText
+{
+  font-size: 1.5rem;
+}
