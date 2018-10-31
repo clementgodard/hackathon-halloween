@@ -16,6 +16,7 @@ import { BonbonsComponent } from './bonbons/bonbons.component';
 import { TriBonbonPipe } from './tri-bonbon.pipe';
 import { MapService } from './map.service';
 import { HomeComponent } from './home/home.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     PageBonbonsComponent,
     BonbonsComponent,
     TriBonbonPipe,
-    HomeComponent
+    HomeComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
