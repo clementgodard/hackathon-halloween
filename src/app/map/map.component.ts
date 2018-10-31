@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MapService } from '../map.service';
 import { Bonbon } from '../bonbon';
+import { CandyApiService } from '../candy-api.service';
 
 @Component({
   selector: 'app-map',
@@ -10,7 +11,7 @@ import { Bonbon } from '../bonbon';
 export class MapComponent implements OnInit {
   public mapService: MapService;
 
-  constructor(param: MapService) {
+  constructor(param: MapService, candyService: CandyApiService) {
     this.mapService = param;
   }
 
