@@ -69,14 +69,12 @@ i {
 }
 *:focus::placeholder { 
     opacity: 0;
-
 }
 
-.front-button {
+.logo-connexion .front-button {
     background-color: black;
     border: 1px solid #FF5800;
-    color: white;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     margin: .5vh 0;
 }
 
@@ -87,6 +85,10 @@ i {
     color: white;
     font-size: 1.5rem;
     padding: 0 5%;
+}
+
+.logo-connexion {
+    padding-top: 1vh;
 }
 
 /*__________container du site___________*/
@@ -107,7 +109,7 @@ i {
 
 .titre-app{
     text-align: center;
-    font-size: 4rem;
+    font-size: 2.5rem;
     background: linear-gradient(to bottom, #000001 0%, #FF5800 100%);
 }
 
@@ -137,7 +139,7 @@ i {
 .boutton-nav-bar{
     border-right: 1px solid #FF5800;
     border-left: 1px solid #FF5800;
-    font-size: 2rem;
+    font-size: 1.5rem;
     
 }
 
