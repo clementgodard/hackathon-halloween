@@ -6,10 +6,10 @@
 <div id="overlay" class="container-fluid">
     <div class="container">
         <span class="close" (click)="mapService.hideAndDeleteOverlay()">&times;</span>
-        <h1>Choisisez votre bonbon</h1>
+        <h1>Choose your candy</h1>
 
         <form class="form-inline justify-content-center">
-            <input class="form-control w-100" id="recherche" type="text" name="recherche" [(ngModel)]="recherche" />
+            <input class="form-control w-100" id="recherche" placeholder="search" type="text" name="recherche" [(ngModel)]="recherche" />
         </form>
 
         <div class="row">
