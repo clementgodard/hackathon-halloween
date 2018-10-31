@@ -7,6 +7,62 @@
     padding-right: 0;
  }
 
+ #sign-in-overlay, #register-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 2;
+    cursor: default;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+form {
+    background-color: rgba(0,0,0,0.85);
+    border: 1px solid orangered;
+    box-shadow: 5px 5px 5px #FF8800;
+    padding: 5vh;
+}
+
+i {
+    cursor: pointer;
+}
+
+.front-button {
+    background-color: black;
+    border: 1px solid orangered;
+    color: white;
+    font-size: 1.5em;
+    margin: .5vh 0;
+}
+
+.form-button {
+    background-color: black;
+    border: 1px solid orangered;
+    color: white;
+    font-size: 1.5em;
+    padding: 0 5%;
+    height: 10vh;
+}
+
 /*__________container du site___________*/
 .container-fluid {
     /* background-color: #000001; */
@@ -34,14 +90,14 @@
     color : #F30605;
 }
 
-.logo-connexion p{
+.logo-connexion button{
     color: #FF5800;
     font-size: 1.5em;
     text-align: center;
     border: 1px solid #FF5800;
 }
 
-.logo-connexion p:hover{
+.logo-connexion button:hover{
     background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
     color: #000001;
     box-shadow: 5px 5px 5px #FF8800;
@@ -86,11 +142,11 @@ h2{
 .image-candy{
     overflow: hidden;
     border: 1px solid #FF5800;
-    box-shadow: 10px 5px 5px #FF8800;
+    box-shadow: 5px 5px 5px 5px #FF8800;
 }
 
 .description-candy{
     margin-top: 1em;
     border: 1px solid #FF5800;
-    box-shadow: 10px 5px 5px #FF8800;
+    box-shadow: 5px 5px 5px 5px #FF8800;
 }

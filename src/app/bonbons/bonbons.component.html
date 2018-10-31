@@ -1,0 +1,33 @@
+<div id="listeBonbonEnPoche" class="container">
+  <h2>Types de bonbon collectés (x{{ service.bonbonEnPoche.length }}) :</h2>
+  <div class="row">
+    <div class="bonbonEnPoche col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.bonbonEnPoche">
+      <h3>{{ bonbon.getNom() }} (x{{ bonbon.getNombre() }})</h3>
+      <span class="close" (click)="service.enlever(bonbon)">&times;</span>
+      <!-- <img class="img-fluid" src="{{ bonbon.getImg() }}" alt="bonbon en poche" /> -->
+    </div>
+  </div>
+</div>
+
+<div id="listeBonbons" class="container mb-4">
+  <h2>Liste de tout les bonbons :</h2>
+
+  <form class="form-inline justify-content-center align-items-center mb-4">
+    <label class="col-form-label mr-2" for="recherche">Recherche de bonbon :</label>
+    <input class="form-control w-50" id="recherche" type="text" name="recherche" [(ngModel)]="recherche" />
+    <input class="form-control ml-4" type="button" value="Afficher/Cacher tout les bonbons" (click)="toggleViewAll()" />
+  </form>
+
+  <div class="row">
+    <div class="bonbon col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.tableauBonbons | triBonbon:recherche:viewAll"
+      (click)="service.addBonbon(bonbon) ; mapService.addMarker(bonbon);">
+      <h3>{{ bonbon.getNom() }}</h3>
+      <img class="img-fluid" src="{{ bonbon.getImg() }}" alt="bonbon" />
+    </div>
+  </div>
+</div>
+
+<div class="goTop">
+  <!-- <a href="#" class="couleur"><i class="far fa-arrow-alt-circle-up"></i></a> -->
+  <a href="#" class="couleur"><i class="fas fa-ghost"></i><span class="petitText">&nbsp;Retour en haut&nbsp;</span><i class="fas fa-ghost"></i></a>
+</div>

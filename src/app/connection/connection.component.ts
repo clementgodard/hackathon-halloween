@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CdkOverlayOrigin } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-page-bonbons',
-  templateUrl: './page-bonbons.component.html',
-  styleUrls: ['./page-bonbons.component.css']
+  selector: 'app-connection',
+  templateUrl: './connection.component.html',
+  styleUrls: ['./connection.component.css']
 })
-export class PageBonbonsComponent implements OnInit {
+export class ConnectionComponent implements OnInit {
 
   buttonOverlayOrigin: CdkOverlayOrigin;
-
+  
   constructor() { }
 
   signInOn() {
