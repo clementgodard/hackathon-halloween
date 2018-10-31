@@ -38,12 +38,35 @@
 form {
     background-color: rgba(0,0,0,0.85);
     border: 1px solid orangered;
-    box-shadow: 5px 5px 5px #FF8800;
+    box-shadow: 5px 5px 5px 5px #FF8800;
     padding: 5vh;
 }
 
 i {
     cursor: pointer;
+}
+
+.form-group {
+    color: #FF5800;
+}
+
+.form-group input {
+    border: 1px solid orangered;
+}
+
+.form-group input {
+    background-color: #000001;
+}
+
+::placeholder {
+    color:white;
+    padding-left: 2%;
+    opacity: 1; 
+    transition: opacity .5s;
+}
+*:focus::placeholder { 
+    opacity: 0;
+
 }
 
 .front-button {
@@ -55,12 +78,12 @@ i {
 }
 
 .form-button {
+    height: 5vh;
     background-color: black;
     border: 1px solid orangered;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 0 5%;
-    height: 10vh;
 }
 
 /*__________container du site___________*/
@@ -75,18 +98,18 @@ i {
     color: #000001;  
 }
 
-.container-titre-app:hover{
+/* .container-titre-app:hover{
     
-}
+} */
 
 .titre-app{
     text-align: center;
     font-size: 500%;
-    background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
+    background: linear-gradient(to bottom, #000001 0%, #FF5800 100%);
 }
 
 .titre-app:hover{
-    background: linear-gradient(to bottom, #ff5800 0%, #000001 100%);
+    background: linear-gradient(to bottom, #FF5800 0%, #000001 100%);
     color : #F30605;
 }
 
@@ -98,9 +121,9 @@ i {
 }
 
 .logo-connexion button:hover{
-    background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
+    background: linear-gradient(to bottom, #000001 0%, #FF5800 100%);
     color: #000001;
-    box-shadow: 5px 5px 5px #FF8800;
+    box-shadow: 5px 5px 5px 5px #FF8800;
 }
 
 /*__________container Nav Bar___________*/
@@ -116,9 +139,9 @@ i {
 }
 
 .boutton-nav-bar:hover{
-    background: linear-gradient(to bottom, #000001 0%, #ff5800 100%);
+    background: linear-gradient(to bottom, #000001 0%, #FF5800 100%);
     color: #000001;    
-    box-shadow: 10px 5px 5px #FF8800;
+    box-shadow: 5px 5px 5px 5px #FF8800;
 }
 
 /*__________Image API__________________*/

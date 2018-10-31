@@ -1,42 +1,45 @@
-
 <div id="sign-in-overlay">
-  <div id="text">
+  <div class="col-10 col-md-8 col-lg-6" id="text">
     <form>
       <i class="fas fa-times float-right" (click)="off()"> </i>
-      <div class="form-group">
+      <div class="form-group col-8 ml-auto mr-auto">
         <label for="sign-in-email">E-mail</label>
-        <input type="email" class="form-control" id="sign-in-email" placeholder="example@example.com">
+        <input class="form-control" type="email" id="sign-in-email" placeholder="example@example.com">
       </div>
-      <div class="form-group">
+      <div class="form-group col-8 ml-auto mr-auto">
         <label for="sign-in-password">Password</label>
-        <input type="password" class="form-control" id="sign-in-password" placeholder="Password">
+        <input class="form-control" type="password" id="sign-in-password" placeholder="Password">
       </div>
-      <button class="form-button btn" type="submit" (click)="off()">Sign in</button>
+      <div class="col-8 ml-auto mr-auto">
+        <button class="form-button btn col-12" type="submit" (click)="off()">Sign in</button>
+      </div>
     </form>
   </div>
 </div>
 
 <div id="register-overlay">
-  <div id="text">
+  <div class="col-10 col-md-8 col-lg-6" id="text">
     <form>
       <i class="fas fa-times float-right" (click)="off()"> </i>
-      <div class="form-group">
+      <div class="form-group col-8 ml-auto mr-auto">
         <label for="register-name">Your CandyHunter name</label>
         <input type="text" class="form-control" id="register-name" placeholder="TheBestHunterEver">
       </div>
-      <div class="form-group">
+      <div class="form-group col-8 ml-auto mr-auto">
         <label for="register-email">E-mail</label>
         <input type="email" class="form-control" id="register-email" placeholder="example@example.com">
       </div>
-      <div class="form-group">
+      <div class="form-group col-8 ml-auto mr-auto">
         <label for="register-password">Password</label>
         <input type="password" class="form-control" id="register-password" placeholder="Password">
       </div>
-      <div class="form-group">
+      <div class="form-group col-8 ml-auto mr-auto">
         <label for="register-confirm-password">Confirm password</label>
         <input type="password" class="form-control" id="register-confirm-password" placeholder="Password">
       </div>
-      <button class="form-button btn" type="submit" (click)="off()">Sign in</button>
+      <div class="col-8 ml-auto mr-auto">
+        <button class="form-button btn col-12" type="submit" (click)="off()">Sign in</button>
+      </div>
     </form>
   </div>
 </div>
