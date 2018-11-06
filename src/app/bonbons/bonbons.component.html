@@ -10,7 +10,7 @@
 </div>
 
 <div id="listeBonbons" class="container mb-4">
-  <h2>Candy List :</h2>
+  <h2 (click)="mapService.showOverlay()">Candy List :</h2>
 
   <form class="form-inline justify-content-center align-items-center mb-4">
     <label class="col-form-label mr-2" for="recherche">Candy Search :</label>
@@ -19,10 +19,12 @@
   </form>
 
   <div class="row justify-content-around">
-    <div class="bonbon col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.tableauBonbons | triBonbon:recherche:viewAll"
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.tableauBonbons | triBonbon:recherche:viewAll"
       (click)="service.addBonbon(bonbon) ; mapService.addMarker(bonbon);">
-      <h3>{{ bonbon.getNom() }}</h3>
-      <img class="img-fluid" src="{{ bonbon.getImg() }}" alt="bonbon" />
+      <div class="bonbon">
+        <h3>{{ bonbon.getNom() }}</h3>
+        <img class="img-fluid" src="{{ bonbon.getImg() }}" alt="bonbon" />
+      </div>
     </div>
   </div>
 </div>

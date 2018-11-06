@@ -7,7 +7,7 @@ export class Bonbon {
         this.nom = nom;
         this.nombre = nombre;
 
-        if (img.length > 0) {
+        if (img !== undefined && img.length > 0) {
             this.img = img;
         } else {
             this.img = 'assets/bonbon.png';
