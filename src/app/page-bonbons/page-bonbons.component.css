@@ -29,7 +29,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 50px;
+    font-size: 2rem;
     color: white;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
@@ -57,7 +57,7 @@ i {
 .form-group input {
     background-color: #000001;
     color : white;
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding-left : 2%;
 }
 

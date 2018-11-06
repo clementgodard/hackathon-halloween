@@ -5,8 +5,13 @@ export class Bonbon {
 
     constructor(nom: string, img: string, nombre: number = 1) {
         this.nom = nom;
-        this.img = img;
         this.nombre = nombre;
+
+        if (img.length > 0) {
+            this.img = img;
+        } else {
+            this.img = 'assets/bonbon.png';
+        }
     }
 
     public getNom() {
