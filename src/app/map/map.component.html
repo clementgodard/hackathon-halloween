@@ -15,7 +15,7 @@
     </div>
 
     <div class="row justify-content-around">
-            <div class="col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.tableauBonbons | triBonbon:recherche:viewAll"
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let bonbon of service.tableauBonbons | triBonbon:recherche"
               (click)="service.addBonbon(bonbon) ; addBonbonToMarker(bonbon) ; mapService.hideOverlay()">
               <div class="bonbon">
                 <h3>{{ bonbon.getNom() }}</h3>
